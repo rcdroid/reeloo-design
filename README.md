@@ -21,6 +21,14 @@ Design briefs + system specs for the Reeloo product family. Pointed at by Claude
 - `requests/` — open design requests (each is a self-contained markdown file Claude design can read in isolation).
 - `outputs/` — Claude design's responses (mockups, tokens.json, etc.) — committed back here.
 
+### v3 — gap-driven design requests (2026-05-20)
+
+The v1 reverse-engineering pass under-spec'd the source apps; the v2 brief inherited the gaps; Claude design produced mockups + JSX from that under-spec, and the implementation at `https://reeloo-v2.alpsmind.com` shipped a visibly impoverished port relative to the real podcast/book/learn-stations/readalong surfaces. v3 isn't a new design — it's a set of **targeted gap fills**.
+
+- `v3-gap-audit/<app>.md` — feature inventory of the real app, what v1 captured, what v1 missed, what the impl skipped, what's actually good. One file per source app: `podcast.md`, `book-app.md`, `learn-stations.md`, `readalong.md`.
+- `v3-gap-audit/cross-cutting.md` — 11 themes that span apps (dictionary popups, audio chrome, annotation taxonomy, save-to-SRS, signals + level model, notifications + export, Pip avatar, test-id contract, themes, notes-app boundary, drill state machine).
+- `requests/<NN>-<slug>.md` — open design requests for Claude design (12 files, one per gap-cluster).
+
 ### Reading order for Claude design
 
 1. `v2/06-revised-unified-brief.md` (canonical)
